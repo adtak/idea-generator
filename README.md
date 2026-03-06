@@ -28,15 +28,21 @@ Reads a seed file (interests, pain points, domain notes) and outputs product or 
 
 ```
 idea-generator/
-├── SKILL.md                   # Skill definition
+├── SKILL.md                        # Orchestrator — flow control only
+├── agents/
+│   ├── seed-generator.md           # Seed auto-generation logic
+│   └── proposal-generator.md       # Idea filtering + proposal rules
+├── references/
+│   ├── proposal-template.md        # Markdown template for each proposal
+│   └── output-constraints.md       # Non-negotiable output rules
 └── evals/
-    ├── evals.json             # Eval cases (5 total)
+    ├── evals.json                  # Eval cases (5 total)
     └── files/
-        ├── seed-fitness.txt   # Eval seed — strength training
-        ├── seed-reading.txt   # Eval seed — reading
-        └── seed-freelance.txt # Eval seed — freelance
+        ├── seed-fitness.txt        # Eval seed — strength training
+        ├── seed-reading.txt        # Eval seed — reading
+        └── seed-freelance.txt      # Eval seed — freelance
 
-seeds/                         # Output directory for generated seeds (gitignored)
+seeds/                              # Output directory for generated seeds (gitignored)
 ```
 
 ## Seed files
@@ -46,6 +52,6 @@ Seeds are short, first-person notes written in a conversational tone. Each seed 
 - At least one real existing product/tool name with a specific complaint
 - Usage frequency or years of experience
 - Price sensitivity (monthly or annual amount)
-- A `想定ユーザー：...` line at the end
+- A `Target user: ...` line at the end
 
 `seeds/` is gitignored. Only the handwritten seeds under `evals/files/` are tracked.

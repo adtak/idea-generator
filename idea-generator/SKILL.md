@@ -33,13 +33,13 @@ Pick a domain based on any hints the user gave (e.g., "健康系で", "副業向
 
 Write the seed in the same first-person, conversational style as a real user's notes. The seed must include:
 
-- **一人称・口語調** — 「〜している」「〜が苦手」「〜なら払える」などの語尾。ユーザーの独り言・メモ風。
-- **既存ツール名と具体的な不満** — Notion, Toggl, Goodreads など実在するサービスを挙げ、何が不満かを述べる。
-- **使用頻度・経験年数** — 「3年続けている」「週3回」「月5〜10冊」など数字で具体化。
-- **価格感度** — 月額または年額の金額（例: 「月500円なら払える」）。
-- **想定ユーザーの一行説明** — 末尾に「想定ユーザー：〜」の形式で必ず配置。
+- **First-person, conversational tone** — written like a personal memo or stream of thought ("I've been doing X for 3 years", "I find Y frustrating", "I'd pay Z/month for this").
+- **Real existing tool/service names with specific complaints** — name actual products (Notion, Toggl, Goodreads, etc.) and explain what exactly falls short.
+- **Usage frequency or years of experience** — quantify with numbers ("3 years", "3x a week", "5–10 books/month").
+- **Price sensitivity** — a concrete monthly or annual amount ("I'd pay $5/month", "up to $50/year feels fair").
+- **A target user summary line** — placed at the very end, starting with "Target user: …"
 
-Show the generated seed to the user with a brief note like "シードを生成しました。このペルソナをもとにアイデアを考えます。" Then continue directly to Step 1 using the generated seed content — do not wait for user confirmation unless they indicate they want to review or change it.
+Show the generated seed to the user with a brief note like "Generated a seed. Using this persona as the basis for ideas." Then continue directly to Step 1 — do not wait for user confirmation unless they indicate they want to review or change it.
 
 ### Step 1: Read the seed file
 

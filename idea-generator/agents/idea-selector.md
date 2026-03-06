@@ -2,9 +2,9 @@
 
 ## Input
 
-The candidate idea table produced by candidate-generator.md (Step 2).
+The candidate idea table produced by candidate-generator.md.
 
-## Step 3: Select the Top 3 Ideas
+## Select the Top 3 Ideas
 
 Evaluate all candidates and select exactly 3 using the six filters below.
 

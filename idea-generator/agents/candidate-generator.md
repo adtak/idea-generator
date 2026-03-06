@@ -4,7 +4,7 @@
 
 Seed content — either read from a user-provided file or generated inline by seed-generator.md.
 
-## Step 1: Extract from the Seed(s)
+## Extract from the Seed(s)
 
 If multiple seeds were generated (Seed A, B, C), read all of them and pull out:
 
@@ -15,7 +15,7 @@ If multiple seeds were generated (Seed A, B, C), read all of them and pull out:
 - Any hints about who they'd want to build for
 - Cross-persona patterns: pain points shared across seeds are stronger signals
 
-## Step 2: Generate 8–10 Candidate Ideas
+## Generate 8–10 Candidate Ideas
 
 Come up with 8–10 distinct ideas. At this stage, do not apply strict filters yet — generate broadly across different user types, problem sizes, and revenue models.
 

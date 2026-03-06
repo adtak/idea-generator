@@ -23,9 +23,14 @@ allowed-tools: Read, Write
 2. **If no seed file was provided:** Read `agents/seed-generator.md` and follow it to generate a seed inline. Show the result to the user, then continue.
    **If a seed file was provided:** Read the specified file.
 
-3. Read `agents/proposal-generator.md` and follow it:
-   - Generate 8–10 candidate ideas from the seed
-   - Apply the selection table to pick exactly 3
-   - Write full proposals only for selected ideas, using `references/proposal-template.md`
+3. Read `agents/candidate-generator.md` and follow it:
+   - Extract key signals from the seed
+   - Generate 8–10 candidate ideas in a structured table
 
-4. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.
+4. Read `agents/idea-selector.md` and follow it:
+   - Score all candidates on 4 axes and select exactly 3
+
+5. Read `agents/proposal-writer.md` and follow it:
+   - Write full proposals for the 3 selected ideas, using `references/proposal-template.md`
+
+6. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.

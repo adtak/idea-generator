@@ -1,0 +1,6 @@
+# Eval workspace (generated test artifacts)
+/*-workspace/
+
+# Generated seed files (keep directory tracked via .gitkeep)
+/seeds/*
+!/seeds/.gitkeep

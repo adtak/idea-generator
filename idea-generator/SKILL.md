@@ -11,7 +11,7 @@ description: |
   "I want to build something" or "give me product ideas" or "help me figure out what to make."
 argument-hint: "[product-or-service]"
 disable-model-invocation: true
-allowed-tools: Read, Write
+allowed-tools: Read, Write, WebSearch
 ---
 
 # Product & Service Idea Generator
@@ -27,10 +27,14 @@ allowed-tools: Read, Write
    - Extract key signals from the seed
    - Generate 8–10 candidate ideas in a structured table
 
-4. Read `agents/idea-selector.md` and follow it:
+4. Read `agents/competitor-checker.md` and follow it:
+   - For each candidate, search for existing products with similar scope
+   - Annotate candidates with overlap level (High / Medium / Low / None)
+
+5. Read `agents/idea-selector.md` and follow it:
    - Score all candidates on 6 axes and select exactly 3
 
-5. Read `agents/proposal-writer.md` and follow it:
+6. Read `agents/proposal-writer.md` and follow it:
    - Write full proposals for the 3 selected ideas, using `references/proposal-template.md`
 
-6. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.
+7. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.

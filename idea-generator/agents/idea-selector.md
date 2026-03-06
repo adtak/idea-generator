@@ -21,9 +21,11 @@ Evaluate all candidates and select exactly 3 using the six filters below.
 
 **⚠️ One-shot trap**: If the product's core use case is tied to an infrequent life event (e.g., job interviews, moving, weddings, tax filing), do NOT choose subscription — choose one-time purchase or usage-based instead. If no non-subscription model yields clear WTP, cap Mono at 1.
 
+**⚠️ Clone trap**: If the competitor-checker flagged an idea as "High" overlap with an existing product and the Key Difference is trivial (e.g., minor UI change, same concept for a slightly different audience), cap Diff at 1. "Medium" overlap caps Diff at 2 unless the rationale identifies a concrete, defensible angle the existing product lacks.
+
 **⚠️ Graduation trap**: If the product's core value proposition is teaching a behavior or mindset (e.g., "change one habit per week," "learn to track your skin"), cap Moat at 2 — users will internalize the lesson within weeks and cancel without guilt. A strong Moat requires something the app keeps doing better than the user can do alone (e.g., continuous data the user cannot replicate manually, a community, or personalization that compounds over time).
 
-**Step A — Write rationale first (before scoring).** For each candidate idea, write one bullet per filter axis with a short factual reason. Flag any trap that applies. Example:
+**Step A — Write rationale first (before scoring).** For each candidate idea, write one bullet per filter axis with a short factual reason. Incorporate the competitor-checker results when assessing Diff. Flag any trap that applies. Example:
 
 ```markdown
 **Rationale:**

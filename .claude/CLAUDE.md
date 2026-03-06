@@ -42,9 +42,7 @@ The seed files and eval prompts may be in Japanese. Proposals should match the l
 
 ## Modifying the Skill
 
-After any change to skill files, check whether `CLAUDE.md` and `README.md` need to be updated:
-- **Skill Behavior section in CLAUDE.md** — update if the overall flow, step count, or output structure changes
-- **README.md** — update if the repository structure, eval file list, or user-facing behavior description changes
+After any change to skill files, check whether `CLAUDE.md` and `README.md` need to be updated.
 
 When editing files, preserve:
 - The proposal template structure in `references/proposal-template.md` exactly — evals check for specific sections (Target Audience table, Monetization table, Go-to-Market Phases table, Scorecard with star ratings)

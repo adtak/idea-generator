@@ -1,20 +1,45 @@
 # idea-generator
 
-A Claude Code skill that generates structured product and service proposals from a seed file.
+A Claude Code skill that turns zero input into three scored product proposals — no seed file, no domain expertise required.
 
-## Skill
+## What it does
 
-### `/idea-generator [product-or-service]`
+Give it a one-word domain hint (or nothing at all), and it generates a seed, extracts signals, produces 8-10 candidate ideas, scores them, and writes full proposals for the top 3.
 
-Reads a seed file (interests, pain points, domain notes) and outputs product or service proposals in Markdown. Works for any type of product — mobile apps, web services, SaaS tools, physical products, and more. Tech stack and implementation details are intentionally out of scope.
+This is a [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) — invoke it with `/idea-generator` inside Claude Code.
 
-**If no seed file is provided**, the skill generates 3 personas (Seed A/B/C) inline before producing proposals.
+## What makes it different
+
+- **Start from zero** — No seed file needed. A single hint like "fitness" auto-generates 3 realistic personas with real tool names, price sensitivity, and pain points. Provide a seed file and it skips straight to ideation.
+- **Cross-domain borrowing** — Every candidate must name a mechanic borrowed from another industry (e.g., Duolingo's streak applied to meal planning). Forces novel combinations instead of me-too ideas.
+- **Deliberate omission** — Every candidate must declare one standard feature it intentionally leaves out (e.g., no social feed, no free tier). Prevents feature bloat from the start.
+- **Trap detection** — The scoring step auto-detects three common traps: *Time-to-value trap* (value requires weeks of logging), *One-shot trap* (infrequent life events forced into subscriptions), and *Graduation trap* (users internalize the lesson and cancel). Affected scores are capped automatically.
+- **Solo-dev MVP scope** — All 6 scoring axes assume a single developer shipping in 2-4 weeks. Ideas that need months, heavy backends, or complex ML pipelines score low.
+- **Tech stack agnostic** — Proposals cover audience, features, monetization, go-to-market, and competitive landscape. No architecture or tech stack section — that's a separate decision.
+
+## Pipeline
 
 ```
+Seed  -->  Candidates  -->  Scoring  -->  Proposals
+```
+
+1. **Seed** — Auto-generate 3 personas from a hint, or read a provided seed file
+2. **Candidates** — Extract signals and generate 8-10 ideas (Name / Pitch / Cross-domain Borrowing / Deliberate Omission)
+3. **Scoring** — Rate each on 6 axes (Speed / Diff / Moat / Mono / Build / Risk, each 1-3), apply trap detection, select top 3
+4. **Proposals** — Write full proposals for the 3 selected ideas
+
+## Usage
+
+```
+/idea-generator
+/idea-generator fitness
 /idea-generator seeds/my-domain.txt
 ```
 
-**Each proposal includes:**
+## Output
+
+Each proposal includes:
+
 - Target Audience table
 - Core Features (MVP / Phase 2)
 - Monetization Strategy with pricing table
@@ -31,7 +56,7 @@ idea-generator/
 ├── SKILL.md                        # Orchestrator — flow control only
 ├── agents/
 │   ├── seed-generator.md           # Seed auto-generation logic
-│   ├── candidate-generator.md      # Extracts signals and generates 8–10 candidate ideas
+│   ├── candidate-generator.md      # Extracts signals and generates 8-10 candidate ideas
 │   ├── idea-selector.md            # Scores candidates and selects exactly 3
 │   └── proposal-writer.md          # Writes full proposals for selected ideas
 ├── references/

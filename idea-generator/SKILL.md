@@ -18,12 +18,11 @@ allowed-tools: Read, Write
 
 ## Process
 
-Check whether the user has provided a seed file path as an argument.
+1. Check whether the user has provided a seed file path as an argument.
 
-**If no seed file was provided:** Read `agents/seed-generator.md` and follow it to generate a seed inline. Show the result to the user, then continue.
+2. **If no seed file was provided:** Read `agents/seed-generator.md` and follow it to generate a seed inline. Show the result to the user, then continue.
+   **If a seed file was provided:** Read the specified file.
 
-**If a seed file was provided:** Read the specified file.
+3. Read `agents/proposal-generator.md` and follow it, using the seed content and the template in `references/proposal-template.md`.
 
-Read `agents/proposal-generator.md` and follow it, using the seed content and the template in `references/proposal-template.md`.
-
-Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.
+4. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.

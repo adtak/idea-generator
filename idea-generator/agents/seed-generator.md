@@ -20,10 +20,18 @@ Write the seed in first-person, conversational style as if a real user wrote the
 
 ## Output Format
 
-Output the seed as a short plain-text block. Do not use Markdown headers or bullet points — write it as flowing prose or note-style text, the way a real person would jot down their thoughts.
+Generate **3 seeds (Seed A, B, C)** — each a short plain-text block. Do not use Markdown headers or bullet points within each seed — write it as flowing prose or note-style text, the way a real person would jot down their thoughts.
+
+The 3 seeds must represent meaningfully different personas within the same domain:
+
+- **Seed A**: Less experienced user, clear single pain point, low price sensitivity (e.g., "up to $5/month")
+- **Seed B**: Mid-level user, multiple overlapping frustrations, moderate price sensitivity (e.g., "$10–15/month")
+- **Seed C**: Power user or atypical use case, pushes the domain in an unexpected direction, higher price tolerance (e.g., "$20+/month or one-time")
+
+Each seed must still include all required elements: first-person tone, real tool names with specific complaints, usage frequency, price sensitivity, and a "Target user:" line.
 
 ## Post-Generation
 
-After generating the seed, show it to the user with a brief note: "Generated a seed. Using this persona as the basis for ideas."
+After generating the seeds, show all three to the user with a brief note: "Generated 3 seeds. Using these personas as the basis for ideas."
 
-Then continue directly to the proposal generation step — do not wait for user confirmation unless they explicitly indicate they want to review or change the seed.
+Then continue directly to the proposal generation step — do not wait for user confirmation unless they explicitly indicate they want to review or change the seeds.

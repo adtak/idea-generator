@@ -31,7 +31,9 @@ idea-generator/
 ├── SKILL.md                        # Orchestrator — flow control only
 ├── agents/
 │   ├── seed-generator.md           # Seed auto-generation logic
-│   └── proposal-generator.md       # Candidate generation, selection, and proposal rules
+│   ├── candidate-generator.md      # Extracts signals and generates 8–10 candidate ideas
+│   ├── idea-selector.md            # Scores candidates and selects exactly 3
+│   └── proposal-writer.md          # Writes full proposals for selected ideas
 ├── references/
 │   ├── proposal-template.md        # Markdown template for each proposal
 │   └── output-constraints.md       # Non-negotiable output rules

@@ -11,7 +11,7 @@ There is no build system, runtime, or test runner. The primary artifacts are:
 - `idea-generator/SKILL.md` — orchestrator (flow control only, ~30 lines)
 - `idea-generator/agents/seed-generator.md` — seed auto-generation logic
 - `idea-generator/agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas
-- `idea-generator/agents/idea-selector.md` — scores candidates on 4 axes and selects exactly 3
+- `idea-generator/agents/idea-selector.md` — scores candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk) and selects exactly 3
 - `idea-generator/agents/proposal-writer.md` — writes full proposals for selected ideas
 - `idea-generator/references/proposal-template.md` — Markdown template for each proposal
 - `idea-generator/references/output-constraints.md` — non-negotiable output rules
@@ -25,7 +25,7 @@ The `idea-generator` skill:
 1. Checks whether a seed file was provided
 2. If no seed file: reads `agents/seed-generator.md` and generates a seed inline
 3. Reads `agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas (名前 / ピッチ / クロスドメイン借用 / 意図的な省略)
-4. Reads `agents/idea-selector.md` — scores all candidates on 4 axes (Scope / Diff / Mono / Build, each 1–3) and selects exactly 3
+4. Reads `agents/idea-selector.md` — scores all candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk, each 1–3) and selects exactly 3
 5. Reads `agents/proposal-writer.md` — writes full proposals for the 3 selected ideas using `references/proposal-template.md`
 6. Ends with a ranked recommendation
 

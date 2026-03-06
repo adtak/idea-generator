@@ -1,12 +1,12 @@
 # idea-generator
 
-A Claude Code skill that generates structured iOS app proposals from a seed file.
+A Claude Code skill that generates structured product and service proposals from a seed file.
 
 ## Skill
 
-### `/idea-generator [seed-file]`
+### `/idea-generator [product-or-service]`
 
-Reads a seed file (interests, pain points, domain notes) and outputs iOS app proposals in Markdown, assuming an Expo + AWS stack throughout.
+Reads a seed file (interests, pain points, domain notes) and outputs product or service proposals in Markdown. Works for any type of product — mobile apps, web services, SaaS tools, physical products, and more. Tech stack and implementation details are intentionally out of scope.
 
 **If no seed file is provided**, the skill generates a persona and pain points inline before producing proposals.
 
@@ -18,17 +18,11 @@ Reads a seed file (interests, pain points, domain notes) and outputs iOS app pro
 - Target Audience table
 - Core Features (MVP / Phase 2)
 - Monetization Strategy with pricing table
-- AWS architecture table
-- Development Phases table
+- Go-to-Market Phases table
+- Risks & Mitigations
+- Competitive Landscape
 - Scorecard with star ratings
 - Ranked recommendation summary
-
-**Fixed tech stack:**
-
-| Layer | Technology |
-|-------|------------|
-| Frontend | Expo (React Native) + TypeScript, Expo Router, Zustand / TanStack Query |
-| Backend | AWS Lambda + API Gateway, DynamoDB, S3, Cognito |
 
 ## Repository structure
 
@@ -49,9 +43,9 @@ seeds/                         # Output directory for generated seeds (gitignore
 
 Seeds are short, first-person notes written in a conversational tone. Each seed must include:
 
-- At least one real existing app/tool name with a specific complaint
+- At least one real existing product/tool name with a specific complaint
 - Usage frequency or years of experience
 - Price sensitivity (monthly or annual amount)
-- A `Target user: ...` line at the end
+- A `想定ユーザー：...` line at the end
 
 `seeds/` is gitignored. Only the handwritten seeds under `evals/files/` are tracked.

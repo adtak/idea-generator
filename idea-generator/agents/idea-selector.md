@@ -23,7 +23,17 @@ Evaluate all candidates and select exactly 3 using the six filters below.
 
 **⚠️ Graduation trap**: If the product's core value proposition is teaching a behavior or mindset (e.g., "change one habit per week," "learn to track your skin"), cap Moat at 2 — users will internalize the lesson within weeks and cancel without guilt. A strong Moat requires something the app keeps doing better than the user can do alone (e.g., continuous data the user cannot replicate manually, a community, or personalization that compounds over time).
 
-Output a Markdown table in this exact format:
+**Step A — Write rationale first (before scoring).** For each candidate idea, write one bullet per filter axis with a short factual reason. Flag any trap that applies. Example:
+
+```markdown
+**Rationale:**
+- IdeaA: Speed — frontend-only, no backend needed; Diff — no direct competitor in JP; Moat — UI easily copied, no data lock-in; Mono — one-shot use (One-shot trap → one-time purchase); Build — no external API; Risk — no legal/health concerns
+- IdeaB: Speed — requires ML pipeline; ...
+```
+
+**Step B — Score based on the rationale.** Convert each reason to 1–3 and fill in the table. If the rationale says "requires external data" then Build must not be 3. Scores must be consistent with the rationale written in Step A.
+
+Output the score table in this exact format:
 
 ```markdown
 | Idea   | Speed | Diff | Moat | Mono  | Build | Risk | Total  | Decision                           |

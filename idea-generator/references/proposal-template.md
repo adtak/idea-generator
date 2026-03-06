@@ -40,18 +40,37 @@ Use this exact structure for each idea:
 
 ## Monetization Strategy
 
-### Recommended model: [Freemium / Subscription / One-time purchase / Ad-supported]
+### Recommended model: [Subscription / One-time purchase / Usage-based]
+
+Pick the pricing table that matches the recommended model:
+
+**Subscription** (recurring need weekly+):
 
 | Plan | Price | What's included |
 |------|-------|-----------------|
 | Free | $0 | [Core features] |
 | Pro | $[X]/month | [Premium features] |
 
-**Rationale**: [Why this model fits this product and audience]
+**One-time purchase** (infrequent or one-shot use cases):
 
-**Conservative revenue estimate**:
-- 1,000 active users × 3% conversion = 30 paying users
-- $[X]/month × 30 = $[total]/month
+| Plan | Price | What's included |
+|------|-------|-----------------|
+| Free | $0 | [Core features] |
+| Pro | $[X] (one-time) | [Premium features] |
+
+**Usage-based** (variable frequency):
+
+| Plan | Price | What's included |
+|------|-------|-----------------|
+| Free | $0 | [Core features / limited uses] |
+| Pay-as-you-go | $[X]/use | [Premium features per use] |
+
+**Rationale**: [Why this model AND pricing structure fit this product's usage pattern and audience]
+
+**Conservative revenue estimate** (pick the matching formula):
+- Subscription: 1,000 active users × 3% conversion = 30 paying × $[X]/month = $[total]/month
+- One-time: 1,000 new downloads/month × 3% conversion = 30 purchases × $[X] = $[total]/month (repeat monthly with new users)
+- Usage-based: 1,000 active users × [Y] uses/month × $[X]/use = $[total]/month
 
 ---
 

@@ -28,7 +28,7 @@ allowed-tools: Read, Write
    - Generate 8–10 candidate ideas in a structured table
 
 4. Read `agents/idea-selector.md` and follow it:
-   - Score all candidates on 4 axes and select exactly 3
+   - Score all candidates on 6 axes and select exactly 3
 
 5. Read `agents/proposal-writer.md` and follow it:
    - Write full proposals for the 3 selected ideas, using `references/proposal-template.md`

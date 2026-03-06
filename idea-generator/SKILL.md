@@ -23,6 +23,9 @@ allowed-tools: Read, Write
 2. **If no seed file was provided:** Read `agents/seed-generator.md` and follow it to generate a seed inline. Show the result to the user, then continue.
    **If a seed file was provided:** Read the specified file.
 
-3. Read `agents/proposal-generator.md` and follow it, using the seed content and the template in `references/proposal-template.md`.
+3. Read `agents/proposal-generator.md` and follow it:
+   - Generate 8–10 candidate ideas from the seed
+   - Apply the selection table to pick exactly 3
+   - Write full proposals only for selected ideas, using `references/proposal-template.md`
 
 4. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.

@@ -22,9 +22,11 @@ The `idea-generator` skill:
 
 1. Checks whether a seed file was provided
 2. If no seed file: reads `agents/seed-generator.md` and generates a seed inline
-3. Reads `agents/proposal-generator.md` and generates 3–5 proposals filtered by: solo-shippable scope (~3 months MVP), clear differentiation, believable monetization path, no exotic dependencies
-4. Outputs each proposal using the template in `references/proposal-template.md`
-5. Ends with a ranked recommendation
+3. Reads `agents/proposal-generator.md` and follows a 3-step flow:
+   - Generates 8–10 candidate ideas in a structured table (名前 / ピッチ / クロスドメイン借用 / 意図的な省略)
+   - Scores all candidates on 4 axes (Scope / Diff / Mono / Build, each 1–3) and selects exactly 3
+   - Writes full proposals for the 3 selected ideas using `references/proposal-template.md`
+4. Ends with a ranked recommendation
 
 Tech stack and implementation details are **intentionally out of scope**. Covers any type of product or service — mobile apps, web services, SaaS tools, physical products, and more.
 
@@ -39,6 +41,8 @@ Evals are defined in `idea-generator/evals/evals.json`. Each eval has:
 The seed files and eval prompts may be in Japanese. Proposals should match the language the user writes in (Japanese prompt → Japanese output).
 
 ## Modifying the Skill
+
+After any change to skill files, check whether `CLAUDE.md` and `README.md` need to be updated.
 
 When editing files, preserve:
 - The proposal template structure in `references/proposal-template.md` exactly — evals check for specific sections (Target Audience table, Monetization table, Go-to-Market Phases table, Scorecard with star ratings)

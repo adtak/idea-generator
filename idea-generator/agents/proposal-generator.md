@@ -14,25 +14,52 @@ If multiple seeds were generated (Seed A, B, C), read all of them and pull out:
 - Any hints about who they'd want to build for
 - Cross-persona patterns: pain points shared across seeds are stronger signals
 
-## Step 2: Generate 3–5 Ideas
+## Step 2: Generate 8–10 Candidate Ideas
 
-Come up with 3–5 distinct ideas. Each must pass all four filters:
+Come up with 8–10 distinct ideas. At this stage, do not apply strict filters yet — generate broadly across different user types, problem sizes, and revenue models.
 
-- **Scope**: MVP one person can ship within ~3 months — keeps the project realistic for a solo builder; ideas that require a team or years of work are out
-- **Differentiation**: A clear angle that isn't just "existing product + minor tweak" — without a meaningful difference, there's no reason for users to switch
-- **Monetization path**: A believable route to revenue (subscription, freemium, one-time, ads) — validates that the idea has a business model, not just utility
-- **Buildable**: No exotic dependencies or prohibitive upfront costs — reduces the risk of getting blocked before launch
+Output a Markdown table in this exact format:
 
-Apply these two divergence lenses to push ideas beyond the obvious:
+```markdown
+| # | 名前 | ピッチ | クロスドメイン借用 | 意図的な省略 |
+|---|------|--------|--------------------|--------------|
+| 1 | [Product name] | [What it does and for whom] | [Mechanic borrowed from another industry + source] | [Standard feature deliberately left out] |
+| 2 | ... | ... | ... | ... |
+```
 
-**Cross-domain borrowing**: Each idea must explicitly borrow a mechanic or interaction pattern from a completely different industry (e.g., Duolingo's streak system, Airbnb's host/guest dynamic, insurance's deductible model). State which mechanic is borrowed and from where. Ideas that stay within the domain's own conventions are not enough.
+- **名前**: Short product name
+- **ピッチ**: One-line description of what it does and for whom
+- **クロスドメイン借用**: A mechanic borrowed from a completely different industry (e.g., Duolingo's streak, Airbnb's host/guest dynamic, insurance's deductible model) — must name the mechanic and its origin
+- **意図的な省略**: One standard feature deliberately left out (e.g., no social feed, no notifications, no free tier)
 
-**Intentional omission**: Each idea must deliberately leave out one feature that is standard in its category (e.g., no social feed, no notifications, no free tier, no user accounts). State the omission clearly and explain in the Overview why removing it is a strategic advantage — not just a scope cut.
+## Step 3: Select the Top 3 Ideas
 
-## Step 3: Write the Proposals
+Evaluate all candidates and select exactly 3 using the four filters below.
 
-Write a full proposal for each idea using the structure in `references/proposal-template.md`.
+**Filters (score each 1–3):**
+- **Scope**: MVP one person can ship within ~3 months (1 = unrealistic, 3 = clearly doable)
+- **Diff**: Clear angle vs. existing products (1 = me-too, 3 = meaningfully different)
+- **Mono**: Believable revenue route (1 = unclear, 3 = obvious path)
+- **Build**: No exotic dependencies or prohibitive costs (1 = high risk, 3 = low risk)
+
+Output a Markdown table in this exact format:
+
+```markdown
+| Idea | Scope | Diff | Mono | Build | Total | Decision |
+|------|:-----:|:----:|:----:|:-----:|:-----:|----------|
+| [Name] | 3 | 3 | 3 | 3 | **12** | ✅ Selected |
+| [Name] | 2 | 2 | 2 | 2 | 8 | ❌ [One-line reason for rejection] |
+```
+
+Exactly 3 ideas must have `✅ Selected`. If scores are tied, prefer the idea with higher Diff.
+After the table, add a one-sentence note explaining any non-obvious tie-breaking decisions.
+
+## Step 4: Write Full Proposals
+
+Write a full proposal for each selected idea using the structure in `references/proposal-template.md`.
 
 Apply all constraints in `references/output-constraints.md`.
+
+Each proposal must include the cross-domain mechanic and intentional omission identified in Step 2, and explain in the Overview why the omission is a strategic advantage — not just a scope cut.
 
 After all proposals, add a ranked recommendation: which idea to build first and why. This is mandatory.

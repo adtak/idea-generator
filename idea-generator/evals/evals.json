@@ -3,50 +3,6 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "evals/files/seed-fitness.txt を読んでプロダクトのアイデアを生成して、企画書をMarkdownで出力して",
-      "expected_output": "3–5 product proposals in Markdown. Each proposal must include: overview, target audience table, MVP feature list, monetization plan with pricing table, go-to-market phases, and a scorecard. End with a ranked recommendation. No tech architecture section.",
-      "files": ["evals/files/seed-fitness.txt"],
-      "expectations": [
-        "Output contains at least 3 distinct product proposals",
-        "Each proposal has a Target Audience section with a table",
-        "Each proposal includes a Monetization Strategy section with pricing",
-        "Each proposal includes a Go-to-Market Phases table",
-        "Each proposal includes a Scorecard with star ratings",
-        "Output ends with a ranked recommendation summary",
-        "Proposals are grounded in the seed content (strength training / habit tracking domain)",
-        "Output does not include a Tech Architecture or tech stack section"
-      ]
-    },
-    {
-      "id": 2,
-      "prompt": "evals/files/seed-reading.txt のシードファイルを使って企画書を作って。ファイルに保存してほしい",
-      "expected_output": "3–5 product proposals saved to a Markdown file. Content covers reading/bookshelf domain from the seed. Each proposal uses the standard template including target audience, monetization, and go-to-market phases. No tech stack section.",
-      "files": ["evals/files/seed-reading.txt"],
-      "expectations": [
-        "Output is saved to a .md file (not just printed inline)",
-        "Output contains at least 3 distinct product proposals",
-        "Proposals are grounded in reading/books domain from the seed",
-        "Each proposal has monetization strategy with a pricing table",
-        "Output ends with a ranked recommendation",
-        "Output does not include a Tech Architecture or tech stack section"
-      ]
-    },
-    {
-      "id": 3,
-      "prompt": "evals/files/seed-freelance.txt を読んで、副業フリーランス向けのプロダクトアイデアを考えて。企画書は日本語で",
-      "expected_output": "3–5 product proposals in Japanese Markdown, grounded in the freelance/invoicing/time-tracking domain from the seed. All standard sections present. Monetization realistic for small freelancers (low price point). No tech stack section.",
-      "files": ["evals/files/seed-freelance.txt"],
-      "expectations": [
-        "Output is written in Japanese",
-        "Output contains at least 3 distinct product proposals",
-        "Proposals address freelance pain points from the seed (invoicing, time tracking, expense tracking)",
-        "Monetization pricing reflects the budget mentioned in seed (~¥500–1,000/month)",
-        "Output ends with a ranked recommendation in Japanese",
-        "Output does not include a Tech Architecture or tech stack section"
-      ]
-    },
-    {
-      "id": 4,
       "prompt": "プロダクトのアイデアを考えて",
       "expected_output": "idea-generator generates a seed inline (first-person, conversational style with existing tool names, price sensitivity, and target user line), then produces 3–5 product proposals using the standard template. No seed file is provided — the seed must be generated from scratch. No tech stack section.",
       "files": [],
@@ -64,7 +20,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 2,
       "prompt": "健康・メンタル系でプロダクトのアイデアを考えて",
       "expected_output": "idea-generator generates a seed scoped to health/mental wellness domain, then produces 3–5 proposals grounded in that seed. The seed should reflect a realistic health/mental wellness persona with specific pain points and existing tool complaints. No tech stack section.",
       "files": [],
@@ -77,6 +33,22 @@
         "All proposals are grounded in health or mental wellness domain",
         "Each proposal includes a Scorecard with star ratings",
         "Output ends with a ranked recommendation summary",
+        "Output does not include a Tech Architecture or tech stack section"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "evals/files/seed-fitness.txt を読んでプロダクトのアイデアを生成して、企画書をMarkdownで出力して",
+      "expected_output": "3–5 product proposals in Markdown. Each proposal must include: overview, target audience table, MVP feature list, monetization plan with pricing table, go-to-market phases, and a scorecard. End with a ranked recommendation. No tech architecture section.",
+      "files": ["evals/files/seed-fitness.txt"],
+      "expectations": [
+        "Output contains at least 3 distinct product proposals",
+        "Each proposal has a Target Audience section with a table",
+        "Each proposal includes a Monetization Strategy section with pricing",
+        "Each proposal includes a Go-to-Market Phases table",
+        "Each proposal includes a Scorecard with star ratings",
+        "Output ends with a ranked recommendation summary",
+        "Proposals are grounded in the seed content (strength training / habit tracking domain)",
         "Output does not include a Tech Architecture or tech stack section"
       ]
     }

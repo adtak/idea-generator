@@ -16,7 +16,7 @@ Use this exact structure for each idea:
 ## Target Audience
 
 | Attribute | Details |
-|-----------|---------|
+| --- | --- |
 | Primary user | [Concrete persona] |
 | Demographics | [Age, occupation, lifestyle] |
 | Core pain point | [Specific frustration they feel today] |
@@ -47,21 +47,21 @@ Pick the pricing table that matches the recommended model:
 **Subscription** (recurring need weekly+):
 
 | Plan | Price | What's included |
-|------|-------|-----------------|
+| --- | --- | --- |
 | Free | $0 | [Core features] |
 | Pro | $[X]/month | [Premium features] |
 
 **One-time purchase** (infrequent or one-shot use cases):
 
 | Plan | Price | What's included |
-|------|-------|-----------------|
+| --- | --- | --- |
 | Free | $0 | [Core features] |
 | Pro | $[X] (one-time) | [Premium features] |
 
 **Usage-based** (variable frequency):
 
 | Plan | Price | What's included |
-|------|-------|-----------------|
+| --- | --- | --- |
 | Free | $0 | [Core features / limited uses] |
 | Pay-as-you-go | $[X]/use | [Premium features per use] |
 
@@ -77,7 +77,7 @@ Pick the pricing table that matches the recommended model:
 ## Go-to-Market Phases
 
 | Phase | Timeline | Milestone |
-|-------|----------|-----------|
+| --- | --- | --- |
 | Phase 1 | Weeks 1–4 | Core feature set + basic UX |
 | Phase 2 | Weeks 5–8 | Feedback loop + iteration |
 | Phase 3 | Weeks 9–12 | Beta / early access launch |
@@ -88,7 +88,7 @@ Pick the pricing table that matches the recommended model:
 ## Risks & Mitigations
 
 | Risk | Mitigation |
-|------|-----------|
+| --- | --- |
 | [Risk 1] | [Mitigation] |
 | [Risk 2] | [Mitigation] |
 
@@ -97,7 +97,7 @@ Pick the pricing table that matches the recommended model:
 ## Competitive Landscape
 
 | Competitor | Weakness | This product's edge |
-|------------|----------|---------------------|
+| --- | --- | --- |
 | [Product/service] | [What it lacks] | [Your advantage] |
 
 ---
@@ -105,7 +105,7 @@ Pick the pricing table that matches the recommended model:
 ## Scorecard
 
 | Dimension | Score (1–5) | Notes |
-|-----------|------------|-------|
+| --- | --- | --- |
 | Market need | ★★★★☆ | |
 | Feasibility | ★★★★☆ | |
 | Differentiation | ★★★☆☆ | |

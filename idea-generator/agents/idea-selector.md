@@ -13,7 +13,7 @@ Evaluate all candidates and select exactly 3 using the six filters below.
 - **Speed (Scope & Effort)**: Can a solo developer ship a core MVP in 2-4 weeks? (1 = requires months, heavy backend, or complex ML; 3 = doable in weeks, mostly frontend/simple logic)
 - **Diff**: Clear angle vs. existing products (1 = me-too, 3 = meaningfully different)
 - **Moat (Defensibility)**: If a giant competitor (e.g., Cookpad, Kurashiru) copies this UI in a 2-week sprint, do we survive? (1 = easily crushed/just a UI gimmick; 3 = survives via unique niche, data lock-in, or specific community focus)
-- **Mono (Monetization)**: Is there a clear, defensible path to revenue under the model best suited to the product's usage pattern? Pick the strongest fit from: **subscription** (recurring need weekly+), **one-time purchase** (infrequent but high-stakes events), or **usage-based/pay-as-you-go** (variable frequency). *CRITICAL RULE: Do NOT propose ad-supported or two-sided marketplaces, as they require unrealistic scale/liquidity for a solo MVP.* (1 = unclear how to monetize or model mismatch with usage pattern; 2 = plausible but thin; 3 = obvious path with strong WTP under the chosen model)
+- **Mono (Monetization)**: Is there a clear, defensible path to revenue under the model best suited to the product's usage pattern? Pick the strongest fit from: **subscription** (recurring need weekly+), **one-time purchase** (infrequent but high-stakes events), or **usage-based/pay-as-you-go** (variable frequency). _CRITICAL RULE: Do NOT propose ad-supported or two-sided marketplaces, as they require unrealistic scale/liquidity for a solo MVP._ (1 = unclear how to monetize or model mismatch with usage pattern; 2 = plausible but thin; 3 = obvious path with strong WTP under the chosen model)
 - **Build**: No exotic dependencies or prohibitive costs (1 = high risk, 3 = low risk)
 - **Risk (Liability & Ops)**: Are there legal, medical, or heavy ongoing data-maintenance dependencies? (1 = high liability like allergy/health/finances, or manual DB updates; 3 = low risk, zero to minimal external dependencies)
 
@@ -27,8 +27,16 @@ Evaluate all candidates and select exactly 3 using the six filters below.
 
 ```markdown
 **Rationale:**
-- IdeaA: Speed — frontend-only, no backend needed; Diff — no direct competitor in JP; Moat — UI easily copied, no data lock-in; Mono — one-shot use (One-shot trap → one-time purchase); Build — no external API; Risk — no legal/health concerns
-- IdeaB: Speed — requires ML pipeline; ...
+
+- IdeaA:
+  - Speed: frontend-only, no backend needed
+  - Diff: no direct competitor in JP
+  - Moat: UI easily copied, no data lock-in
+  - Mono: one-shot use (One-shot trap → one-time purchase)
+  - Build: no external API
+  - Risk: no legal/health concerns
+- IdeaB:
+  - Speed: requires ML pipeline...
 ```
 
 **Step B — Score based on the rationale.** Convert each reason to 1–3 and fill in the table. If the rationale says "requires external data" then Build must not be 3. Scores must be consistent with the rationale written in Step A.
@@ -36,10 +44,10 @@ Evaluate all candidates and select exactly 3 using the six filters below.
 Output the score table in this exact format:
 
 ```markdown
-| Idea   | Speed | Diff | Moat | Mono  | Build | Risk | Total  | Decision                           |
-| ------ | :---: | :--: | :--: | :---: | :---: | :--: | :----: | ---------------------------------- |
-| [Name] |   3   |  3   |  3   |   3   |   3   |  3   | **18** | ✅ Selected                        |
-| [Name] |   2   |  2   |  2   |   2   |   2   |  2   |   12   | ❌ [One-line reason for rejection] |
+| Idea | Speed | Diff | Moat | Mono | Build | Risk | Total | Decision |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [Name] | 3 | 3 | 3 | 3 | 3 | 3 | **18** | ✅ Selected |
+| [Name] | 2 | 2 | 2 | 2 | 2 | 2 | 12 | ❌ [One-line reason for rejection] |
 ```
 
 Exactly 3 ideas must have `✅ Selected`. If scores are tied, prefer the idea with higher Diff.

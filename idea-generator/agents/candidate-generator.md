@@ -7,6 +7,7 @@ Seed content — either read from a user-provided file or generated inline by se
 ## Step 1: Extract from the Seed(s)
 
 If multiple seeds were generated (Seed A, B, C), read all of them and pull out:
+
 - Domains of interest
 - Frustrations, pain points, inefficiencies the user notices — across all personas
 - Complaints about existing tools or services
@@ -22,7 +23,7 @@ Output a Markdown table in this exact format:
 
 ```markdown
 | # | Name | Pitch | Cross-domain Borrowing | Deliberate Omission |
-|---|------|-------|------------------------|---------------------|
+| --- | --- | --- | --- | --- |
 | 1 | [Product name] | [What it does and for whom] | [Mechanic borrowed from another industry + source] | [Standard feature deliberately left out] |
 | 2 | ... | ... | ... | ... |
 ```

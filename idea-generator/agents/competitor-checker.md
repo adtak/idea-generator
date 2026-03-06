@@ -4,7 +4,7 @@
 
 The candidate idea table produced by candidate-generator.md.
 
-## Step: Check Each Candidate for Existing Competitors
+## Check Each Candidate for Existing Competitors
 
 For each candidate idea, search for existing products with similar scope:
 

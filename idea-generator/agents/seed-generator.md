@@ -6,7 +6,7 @@ You have been asked to generate a seed because the user provided no seed file. G
 
 ## Domain Selection
 
-Use any hints the user gave (e.g., "健康系で", "副業向けで", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
+Use any hints the user gave (e.g., "health and wellness", "for side hustles", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
 
 ## Required Seed Elements
 

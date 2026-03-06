@@ -21,13 +21,13 @@ Come up with 8–10 distinct ideas. At this stage, do not apply strict filters y
 Output a Markdown table in this exact format:
 
 ```markdown
-| # | 名前 | ピッチ | クロスドメイン借用 | 意図的な省略 |
-|---|------|--------|--------------------|--------------|
+| # | Name | Pitch | Cross-domain Borrowing | Deliberate Omission |
+|---|------|-------|------------------------|---------------------|
 | 1 | [Product name] | [What it does and for whom] | [Mechanic borrowed from another industry + source] | [Standard feature deliberately left out] |
 | 2 | ... | ... | ... | ... |
 ```
 
-- **名前**: Short product name
-- **ピッチ**: One-line description of what it does and for whom
-- **クロスドメイン借用**: A mechanic borrowed from a completely different industry (e.g., Duolingo's streak, Airbnb's host/guest dynamic, insurance's deductible model) — must name the mechanic and its origin
-- **意図的な省略**: One standard feature deliberately left out (e.g., no social feed, no notifications, no free tier)
+- **Name**: Short product name
+- **Pitch**: One-line description of what it does and for whom
+- **Cross-domain Borrowing**: A mechanic borrowed from a completely different industry (e.g., Duolingo's streak, Airbnb's host/guest dynamic, insurance's deductible model) — must name the mechanic and its origin
+- **Deliberate Omission**: One standard feature deliberately left out (e.g., no social feed, no notifications, no free tier)

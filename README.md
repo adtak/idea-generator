@@ -8,6 +8,16 @@ Give it a one-word domain hint (or nothing at all), and it generates a seed, ext
 
 This is a [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) — invoke it with `/idea-generator` inside Claude Code.
 
+## Installation
+
+```bash
+git clone https://github.com/adtak/idea-generator.git
+cd idea-generator
+claude
+```
+
+Then run `/idea-generator` in the Claude Code prompt.
+
 ## What makes it different
 
 - **Start from zero** — No seed file needed. A single hint like "fitness" auto-generates 3 realistic personas with real tool names, price sensitivity, and pain points. Provide a seed file and it skips straight to ideation.
@@ -54,21 +64,24 @@ Each proposal includes:
 ## Repository structure
 
 ```
-idea-generator/
-├── SKILL.md                        # Orchestrator — flow control only
-├── agents/
-│   ├── seed-generator.md           # Seed auto-generation logic
-│   ├── candidate-generator.md      # Extracts signals and generates 8-10 candidate ideas
-│   ├── competitor-checker.md       # Searches for existing competitors and annotates overlap
-│   ├── idea-selector.md            # Scores candidates and selects exactly 3
-│   └── proposal-writer.md          # Writes full proposals for selected ideas
-├── references/
-│   ├── proposal-template.md        # Markdown template for each proposal
-│   └── output-constraints.md       # Non-negotiable output rules
-└── evals/
-    ├── evals.json                  # Eval cases (3 total)
-    └── files/
-        └── seed-fitness.txt        # Eval seed — strength training
+.claude/
+├── CLAUDE.md                       # Project instructions for Claude Code
+└── skills/
+    └── idea-generator/
+        ├── SKILL.md                        # Orchestrator — flow control only
+        ├── agents/
+        │   ├── seed-generator.md           # Seed auto-generation logic
+        │   ├── candidate-generator.md      # Extracts signals and generates 8-10 candidate ideas
+        │   ├── competitor-checker.md       # Searches for existing competitors and annotates overlap
+        │   ├── idea-selector.md            # Scores candidates and selects exactly 3
+        │   └── proposal-writer.md          # Writes full proposals for selected ideas
+        ├── references/
+        │   ├── proposal-template.md        # Markdown template for each proposal
+        │   └── output-constraints.md       # Non-negotiable output rules
+        └── evals/
+            ├── evals.json                  # Eval cases (3 total)
+            └── files/
+                └── seed-fitness.txt        # Eval seed — strength training
 
 seeds/                              # Output directory for generated seeds (gitignored)
 ```

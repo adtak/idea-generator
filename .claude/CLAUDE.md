@@ -8,16 +8,16 @@ This is a **Claude Code skill** repository. It defines a single skill (`idea-gen
 
 There is no build system, runtime, or test runner. The primary artifacts are:
 
-- `idea-generator/SKILL.md` — orchestrator (flow control only, ~30 lines)
-- `idea-generator/agents/seed-generator.md` — seed auto-generation logic
-- `idea-generator/agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas
-- `idea-generator/agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates overlap level
-- `idea-generator/agents/idea-selector.md` — scores candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk) and selects exactly 3
-- `idea-generator/agents/proposal-writer.md` — writes full proposals for selected ideas
-- `idea-generator/references/proposal-template.md` — Markdown template for each proposal
-- `idea-generator/references/output-constraints.md` — non-negotiable output rules
-- `idea-generator/evals/evals.json` — eval cases for validating skill output quality
-- `idea-generator/evals/files/` — seed text files used as eval inputs
+- `.claude/skills/idea-generator/SKILL.md` — orchestrator (flow control only, ~30 lines)
+- `.claude/skills/idea-generator/agents/seed-generator.md` — seed auto-generation logic
+- `.claude/skills/idea-generator/agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas
+- `.claude/skills/idea-generator/agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates overlap level
+- `.claude/skills/idea-generator/agents/idea-selector.md` — scores candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk) and selects exactly 3
+- `.claude/skills/idea-generator/agents/proposal-writer.md` — writes full proposals for selected ideas
+- `.claude/skills/idea-generator/references/proposal-template.md` — Markdown template for each proposal
+- `.claude/skills/idea-generator/references/output-constraints.md` — non-negotiable output rules
+- `.claude/skills/idea-generator/evals/evals.json` — eval cases for validating skill output quality
+- `.claude/skills/idea-generator/evals/files/` — seed text files used as eval inputs
 
 ## Skill Behavior
 
@@ -35,7 +35,7 @@ Tech stack and implementation details are **intentionally out of scope**. Covers
 
 ## Evals
 
-Evals are defined in `idea-generator/evals/evals.json`. Each eval has:
+Evals are defined in `.claude/skills/idea-generator/evals/evals.json`. Each eval has:
 - `prompt` — the user message (may be in Japanese)
 - `expected_output` — description of what a passing response looks like
 - `files` — seed files the skill must read

@@ -8,6 +8,24 @@ You have been asked to generate a seed because the user provided no seed file. G
 
 Use any hints the user gave (e.g., "health and wellness", "for side hustles", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
 
+## Web Research
+
+After selecting the domain, run 3 WebSearch queries to gather real-world data. Each query targets a different persona tier to prevent the seeds from converging on the same tools and complaints. Do NOT include "app" in queries — the domain may produce physical products, services, or communities, not just apps.
+
+1. **Search 1 (for Seed A — beginners):** `[domain] beginner frustrations reddit`
+   - Goal: discover what newcomers struggle with, which entry-level tools/services they try first, and what confuses or disappoints them
+2. **Search 2 (for Seed B — mid-level):** `[domain] products services comparison pricing`
+   - Goal: find existing solutions, their pricing plans, and reasons users switch between them
+3. **Search 3 (for Seed C — power users):** `[domain] experienced user pain points`
+   - Goal: uncover limitations that heavy users hit, niche frustrations, and unmet needs that mainstream products ignore
+
+From each search result, extract and note:
+- Real tool/service/product names
+- Specific complaints or limitations
+- Pricing information (if available)
+
+Use these notes as primary material when writing the seeds below. If a search returns no useful results, fall back to LLM knowledge for that tier but still differentiate from the other seeds.
+
 ## Required Seed Elements
 
 Write the seed in first-person, conversational style as if a real user wrote their personal notes. The seed must include all of the following:
@@ -24,9 +42,11 @@ Generate **3 seeds (Seed A, B, C)** — each a short plain-text block. Do not us
 
 The 3 seeds must represent meaningfully different personas within the same domain:
 
-- **Seed A**: Less experienced user, clear single pain point, minimal budget (e.g., "free only, or $3/month absolute max")
-- **Seed B**: Mid-level user, multiple overlapping frustrations, cautious spender (e.g., "$5/month tops, and it better replace something I'm already paying for")
-- **Seed C**: Power user or atypical use case, pushes the domain in an unexpected direction, willing to pay but still price-conscious (e.g., "up to $7/month if it saves me real time, or $10 one-time")
+- **Seed A**: Less experienced user, clear single pain point, minimal budget (e.g., "free only, or $3/month absolute max"). **Draw primarily from Search 1 results** (beginner frustrations, entry-level tools).
+- **Seed B**: Mid-level user, multiple overlapping frustrations, cautious spender (e.g., "$5/month tops, and it better replace something I'm already paying for"). **Draw primarily from Search 2 results** (pricing comparisons, switching reasons).
+- **Seed C**: Power user or atypical use case, pushes the domain in an unexpected direction, willing to pay but still price-conscious (e.g., "up to $7/month if it saves me real time, or $10 one-time"). **Draw primarily from Search 3 results** (power user limitations, niche pain points).
+
+Each seed may reference other search results as supplementary material, but the primary source must differ across seeds to ensure diversity.
 
 Each seed must still include all required elements: first-person tone, real tool names with specific complaints, usage frequency, price sensitivity, and a "Target user:" line.
 

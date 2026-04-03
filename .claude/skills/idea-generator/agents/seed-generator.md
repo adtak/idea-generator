@@ -8,22 +8,32 @@ You have been asked to generate a seed because the user provided no seed file. G
 
 Use any hints the user gave (e.g., "health and wellness", "for side hustles", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
 
-## Web Research (Supplementary)
+## Seed Validation via WebSearch
 
-After selecting the domain, run 2–3 WebSearch queries to supplement your knowledge with real-world data. The seeds themselves should be shaped by your own creative generation — search results provide concrete backing (real tool names, actual pricing, specific user complaints) but do not dictate the structure or direction of each seed.
+After generating all 3 seeds, validate each seed's core pain points against the real world using WebSearch. This ensures the generated problems actually exist and have a meaningful user base.
 
-Design your queries to cover different angles of the domain rather than repeating the same keyword. Do NOT include "app" in queries — the domain may produce physical products, services, or communities, not just apps.
+### Validation Process
 
-- Vary the query terms across searches — use the user's hint as a starting point but branch into related sub-topics, adjacent activities, or different user segments.
-  - Example: if the hint is "fitness", searches might be `home workout beginner frustrations reddit`, `running gear comparison pricing`, `strength training advanced tools pain points` — each explores a different facet rather than repeating "fitness" verbatim.
-- If no hint was given, derive queries from the domain you chose.
+For each seed, run 1 WebSearch query targeting the primary complaint or frustration described in that seed. Design queries to check whether the problem is real and widespread — e.g., search for the specific frustration, tool complaint, or unmet need mentioned in the seed.
 
-From search results, extract and note:
-- Real tool/service/product names
-- Specific complaints or limitations
-- Pricing information (if available)
+- Do NOT include "app" in queries — the domain may produce physical products, services, or communities, not just apps.
+- Use concrete terms from the seed (tool names, specific complaints) rather than generic keywords.
+  - Example: if Seed A complains about "MyFitnessPal calorie logging being tedious for Japanese meals", search `MyFitnessPal Japanese food logging frustrations`.
 
-Use these notes as supplementary material when writing the seeds — weave in real tool names, prices, and complaints to add concreteness, but let each seed's persona and angle emerge from your own generation.
+### Pass / Fail Criteria
+
+A seed **passes** validation if search results confirm:
+- The described problem or frustration genuinely exists (users are complaining about it, discussing it, or working around it)
+- There is a meaningful number of affected users (not an isolated edge case)
+
+A seed **fails** validation if:
+- No evidence of the described problem exists in search results
+- The problem exists but affects only a negligible number of users
+- The tool or service named in the seed does not actually have the described limitation
+
+### On Failure
+
+If a seed fails validation, discard it entirely and generate a new seed from scratch for the same persona tier (A, B, or C). Then validate the replacement seed with a new WebSearch query. Repeat until the seed passes. Do not attempt more than 5 regenerations per persona tier — if the fifth replacement also fails, keep it and move on.
 
 ## Required Seed Elements
 
@@ -45,12 +55,10 @@ The 3 seeds must represent meaningfully different personas within the same domai
 - **Seed B**: Mid-level user, multiple overlapping frustrations, cautious spender (e.g., "$5/month tops, and it better replace something I'm already paying for")
 - **Seed C**: Power user or atypical use case, pushes the domain in an unexpected direction, willing to pay but still price-conscious (e.g., "up to $7/month if it saves me real time, or $10 one-time")
 
-Enrich each seed with real tool names, prices, and complaints found during web research to add concreteness.
-
 Each seed must still include all required elements: first-person tone, real tool names with specific complaints, usage frequency, price sensitivity, and a "Target user:" line.
 
 ## Post-Generation
 
-After generating the seeds, show all three to the user with a brief note: "Generated 3 seeds. Using these personas as the basis for ideas."
+After generating and validating all seeds, show the final three to the user with a brief note: "Generated 3 seeds (validated via WebSearch). Using these personas as the basis for ideas." If any seed was regenerated, mention which one and why in a single line.
 
 Then continue directly to the proposal generation step — do not wait for user confirmation unless they explicitly indicate they want to review or change the seeds.

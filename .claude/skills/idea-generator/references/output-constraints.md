@@ -18,6 +18,10 @@ Describe features in terms of what the user does and what happens — not abstra
 
 When outputting multiple proposals (which is always), end with a ranked recommendation: which idea to build first and why. This is mandatory, not optional.
 
+## Market Validation Required
+
+Every proposal must include a "Market Validation" section with 2–3 evidence-backed findings from WebSearch. Do not fabricate demand signals. If no evidence was found for a dimension, state "No evidence found" explicitly rather than omitting the section or inventing data.
+
 ## Language Matching
 
 Output language must match the user's prompt language. If the user writes in Japanese, all proposals must be in Japanese. If in English, output in English.

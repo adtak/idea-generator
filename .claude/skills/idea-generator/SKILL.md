@@ -3,7 +3,7 @@ name: idea-generator
 description: |
   Generates product and service ideas from a seed file or domain hint, and outputs structured project proposals in Markdown.
   Covers any type of product or service — mobile apps, web services, SaaS tools, physical products, and more.
-  Produces proposals covering target audience, core features, monetization strategy, go-to-market phases, and competitive landscape.
+  Produces proposals covering target audience, core features, monetization strategy, go-to-market phases, competitive landscape, and market demand validation via WebSearch.
   Tech stack and implementation details are intentionally out of scope.
 
   TRIGGER: Use this skill whenever the user wants to brainstorm product or service ideas, generate a
@@ -34,7 +34,12 @@ allowed-tools: Read, Write, WebSearch
 5. Read `agents/idea-selector.md` and follow it:
    - Score all candidates on 6 axes and select exactly 3
 
-6. Read `agents/proposal-writer.md` and follow it:
-   - Write full proposals for the 3 selected ideas, using `references/proposal-template.md`
+6. Read `agents/market-researcher.md` and follow it:
+   - For each selected idea, research real-world demand signals via WebSearch
+   - Produce a demand assessment (Strong / Moderate / Weak) with evidence
 
-7. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.
+7. Read `agents/proposal-writer.md` and follow it:
+   - Write full proposals for the 3 selected ideas, using `references/proposal-template.md`
+   - Incorporate market research findings into the Market Validation section
+
+8. Ask the user (or infer from context) whether to save to a file or print inline. If saving, use Write.

@@ -8,6 +8,33 @@ You have been asked to generate a seed because the user provided no seed file. G
 
 Use any hints the user gave (e.g., "health and wellness", "for side hustles", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
 
+## Seed Validation via WebSearch
+
+After generating all 3 seeds, validate each seed's core pain points against the real world using WebSearch. This ensures the generated problems actually exist and have a meaningful user base.
+
+### Validation Process
+
+For each seed, run 1 WebSearch query targeting the primary complaint or frustration described in that seed. Design queries to check whether the problem is real and widespread — e.g., search for the specific frustration, tool complaint, or unmet need mentioned in the seed.
+
+- Do NOT include "app" in queries — the domain may produce physical products, services, or communities, not just apps.
+- Use concrete terms from the seed (tool names, specific complaints) rather than generic keywords.
+  - Example: if Seed A complains about "MyFitnessPal calorie logging being tedious for Japanese meals", search `MyFitnessPal Japanese food logging frustrations`.
+
+### Pass / Fail Criteria
+
+A seed **passes** validation if search results confirm:
+- The described problem or frustration genuinely exists (users are complaining about it, discussing it, or working around it)
+- There is a meaningful number of affected users (not an isolated edge case)
+
+A seed **fails** validation if:
+- No evidence of the described problem exists in search results
+- The problem exists but affects only a negligible number of users
+- The tool or service named in the seed does not actually have the described limitation
+
+### On Failure
+
+If a seed fails validation, discard it entirely and generate a new seed from scratch for the same persona tier (A, B, or C). Then validate the replacement seed with a new WebSearch query. Repeat until the seed passes. Do not attempt more than 5 regenerations per persona tier — if the fifth replacement also fails, keep it and move on.
+
 ## Required Seed Elements
 
 Write the seed in first-person, conversational style as if a real user wrote their personal notes. The seed must include all of the following:
@@ -32,6 +59,6 @@ Each seed must still include all required elements: first-person tone, real tool
 
 ## Post-Generation
 
-After generating the seeds, show all three to the user with a brief note: "Generated 3 seeds. Using these personas as the basis for ideas."
+After generating and validating all seeds, show the final three to the user with a brief note: "Generated 3 seeds (validated via WebSearch). Using these personas as the basis for ideas." If any seed was regenerated, mention which one and why in a single line.
 
 Then continue directly to the proposal generation step — do not wait for user confirmation unless they explicitly indicate they want to review or change the seeds.

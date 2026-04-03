@@ -17,7 +17,8 @@
         "Each proposal includes a Monetization Strategy section with pricing",
         "Output ends with a ranked recommendation summary",
         "Output does not include a Tech Architecture or tech stack section",
-        "Output includes a competitor overlap analysis for each candidate idea"
+        "Output includes a competitor overlap analysis for each candidate idea",
+        "Each proposal includes a Market Validation section with evidence-based demand findings"
       ]
     },
     {
@@ -35,7 +36,8 @@
         "Each proposal includes a Scorecard with star ratings",
         "Output ends with a ranked recommendation summary",
         "Output does not include a Tech Architecture or tech stack section",
-        "Output includes a competitor overlap analysis for each candidate idea"
+        "Output includes a competitor overlap analysis for each candidate idea",
+        "Each proposal includes a Market Validation section with evidence-based demand findings"
       ]
     },
     {
@@ -52,7 +54,8 @@
         "Output ends with a ranked recommendation summary",
         "Proposals are grounded in the seed content (strength training / habit tracking domain)",
         "Output does not include a Tech Architecture or tech stack section",
-        "Output includes a competitor overlap analysis for each candidate idea"
+        "Output includes a competitor overlap analysis for each candidate idea",
+        "Each proposal includes a Market Validation section with evidence-based demand findings"
       ]
     }
   ]

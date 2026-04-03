@@ -13,6 +13,22 @@ Use this exact structure for each idea:
 
 ---
 
+## Market Validation
+
+### 1. [Finding title — actionable insight, not just a label]
+
+[2–3 sentences: what was found, where, and why it matters for this product]
+
+### 2. [Finding title]
+
+[2–3 sentences]
+
+### 3. [Finding title]
+
+[2–3 sentences]
+
+---
+
 ## Target Audience
 
 | Attribute | Details |

@@ -13,6 +13,7 @@ There is no build system, runtime, or test runner. The primary artifacts are:
 - `.claude/skills/idea-generator/agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas
 - `.claude/skills/idea-generator/agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates overlap level
 - `.claude/skills/idea-generator/agents/idea-selector.md` — scores candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk) and selects exactly 3
+- `.claude/skills/idea-generator/agents/market-researcher.md` — validates real-world demand for selected ideas via WebSearch (pain points, traction, market size, failure signals)
 - `.claude/skills/idea-generator/agents/proposal-writer.md` — writes full proposals for selected ideas
 - `.claude/skills/idea-generator/references/proposal-template.md` — Markdown template for each proposal
 - `.claude/skills/idea-generator/references/output-constraints.md` — non-negotiable output rules
@@ -28,8 +29,9 @@ The `idea-generator` skill:
 3. Reads `agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas (名前 / ピッチ / クロスドメイン借用 / 意図的な省略)
 4. Reads `agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates each candidate with overlap level (High / Medium / Low / None)
 5. Reads `agents/idea-selector.md` — scores all candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk, each 1–3) and selects exactly 3. Clone trap caps Diff for high-overlap candidates.
-6. Reads `agents/proposal-writer.md` — writes full proposals for the 3 selected ideas using `references/proposal-template.md`
-7. Ends with a ranked recommendation
+6. Reads `agents/market-researcher.md` — validates demand for the 3 selected ideas via WebSearch (pain point signals, existing solution traction, market size, failure warnings). Produces a Demand Verdict (Strong / Moderate / Weak) per idea.
+7. Reads `agents/proposal-writer.md` — writes full proposals for the 3 selected ideas using `references/proposal-template.md`, incorporating market validation findings
+8. Ends with a ranked recommendation
 
 Tech stack and implementation details are **intentionally out of scope**. Covers any type of product or service — mobile apps, web services, SaaS tools, physical products, and more.
 

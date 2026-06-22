@@ -4,53 +4,43 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repo Is
 
-This is a **Claude Code skill** repository. It defines a single skill (`idea-generator`) that generates product and service proposals from a seed text file.
+This is a **Claude Code skill** repository. It defines a single skill (`idea-generator`) that finds a monetizable iPhone app idea via a rejection-sampling loop and writes a full project proposal.
 
 There is no build system, runtime, or test runner. The primary artifacts are:
 
-- `.claude/skills/idea-generator/SKILL.md` — orchestrator (flow control only, ~30 lines)
-- `.claude/skills/idea-generator/agents/seed-generator.md` — seed auto-generation logic
-- `.claude/skills/idea-generator/agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas
-- `.claude/skills/idea-generator/agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates overlap level
-- `.claude/skills/idea-generator/agents/idea-selector.md` — scores candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk) and selects exactly 3
-- `.claude/skills/idea-generator/agents/market-researcher.md` — validates real-world demand for selected ideas via WebSearch (pain points, traction, market size, failure signals)
-- `.claude/skills/idea-generator/agents/proposal-writer.md` — writes full proposals for selected ideas
-- `.claude/skills/idea-generator/references/proposal-template.md` — Markdown template for each proposal
+- `.claude/skills/idea-generator/SKILL.md` — loop orchestrator (flow control only)
+- `.claude/skills/idea-generator/agents/domain-picker.md` — picks ONE fresh domain per iteration (search-free)
+- `.claude/skills/idea-generator/agents/idea-drafter.md` — drafts ONE idea for that domain
+- `.claude/skills/idea-generator/agents/gate-cheap.md` — reasoning-only kill gate (buildable solo? differentiated?)
+- `.claude/skills/idea-generator/agents/gate-saturation.md` — App Store red-ocean check via iTunes Search API
+- `.claude/skills/idea-generator/agents/gate-expensive.md` — WebSearch gate (money thesis real? solo-capturable? regulatory-safe?)
+- `.claude/skills/idea-generator/agents/proposal-writer.md` — writes ONE full proposal for the Go idea
+- `.claude/skills/idea-generator/agents/seed-generator.md` — LEGACY, no longer referenced by SKILL.md
+- `.claude/skills/idea-generator/memories/explored.md` — cross-run memory (GO / Dead domains / Explored-open)
+- `.claude/skills/idea-generator/references/proposal-template.md` — Markdown template for the proposal
 - `.claude/skills/idea-generator/references/output-constraints.md` — non-negotiable output rules
-- `.claude/skills/idea-generator/evals/evals.json` — eval cases for validating skill output quality
-- `.claude/skills/idea-generator/evals/files/` — seed text files used as eval inputs
 
 ## Skill Behavior
 
-The `idea-generator` skill:
+The `idea-generator` skill runs a rejection-sampling loop:
 
-1. Checks whether a seed file was provided
-2. If no seed file: reads `agents/seed-generator.md` and generates a seed inline
-3. Reads `agents/candidate-generator.md` — extracts signals from seed and generates 8–10 candidate ideas (名前 / ピッチ / クロスドメイン借用 / 意図的な省略)
-4. Reads `agents/competitor-checker.md` — searches for existing competitors via WebSearch and annotates each candidate with overlap level (High / Medium / Low / None)
-5. Reads `agents/idea-selector.md` — scores all candidates on 6 axes (Speed / Diff / Moat / Mono / Build / Risk, each 1–3) and selects exactly 3. Clone trap caps Diff for high-overlap candidates.
-6. Reads `agents/market-researcher.md` — validates demand for the 3 selected ideas via WebSearch (pain point signals, existing solution traction, market size, failure warnings). Produces a Demand Verdict (Strong / Moderate / Weak) per idea.
-7. Reads `agents/proposal-writer.md` — writes full proposals for the 3 selected ideas using `references/proposal-template.md`, incorporating market validation findings
-8. Ends with a ranked recommendation
+1. Reads `memories/explored.md` to know which domains are already won, structurally closed, or explored
+2. Picks ONE domain (`agents/domain-picker.md`) — search-free, avoids explored domains
+3. Drafts ONE idea (`agents/idea-drafter.md`) — cross-domain borrowing + deliberate omission + money thesis
+4. Cheap gate (`agents/gate-cheap.md`) — kills obviously-doomed ideas with reasoning only, no WebSearch
+5. Saturation gate (`agents/gate-saturation.md`) — one iTunes Search API call; kills red-ocean niches
+6. Expensive gate (`agents/gate-expensive.md`) — WebSearch; kills on money thesis, capturability, or regulatory grounds
+7. First idea that passes all three gates is the winner → writes a full proposal (`agents/proposal-writer.md`) using `references/proposal-template.md`
+8. Updates `memories/explored.md` with every domain attempted this run
 
-Tech stack and implementation details are **intentionally out of scope**. Covers any type of product or service — mobile apps, web services, SaaS tools, physical products, and more.
-
-## Evals
-
-Evals are defined in `.claude/skills/idea-generator/evals/evals.json`. Each eval has:
-- `prompt` — the user message (may be in Japanese)
-- `expected_output` — description of what a passing response looks like
-- `files` — seed files the skill must read
-- `expectations` — checklist of required output properties
-
-The seed files and eval prompts may be in Japanese. Proposals should match the language the user writes in (Japanese prompt → Japanese output).
+Platform is fixed: solo-developer iPhone app (Expo / React Native, iOS only), MVP in 2-4 weeks. Bar is monetization-first.
 
 ## Modifying the Skill
 
-After any change to skill files, check whether `CLAUDE.md` and `README.md` need to be updated.
+After any change to skill files, check whether `CLAUDE.md` needs to be updated.
 
 When editing files, preserve:
-- The proposal template structure in `references/proposal-template.md` exactly — evals check for specific sections (Target Audience table, Monetization table, Go-to-Market Phases table, Scorecard with star ratings)
-- The ranked recommendation at the end of multi-proposal output
+- The proposal template structure in `references/proposal-template.md` exactly — sections include Target Audience table, Monetization table, Go-to-Market Phases table, Scorecard with star ratings, and Market Validation
 - The constraint in `references/output-constraints.md` that prohibits tech stack / architecture sections
 - The `agents/` files are plain Markdown read by SKILL.md via the Read tool — they are not registered Claude Code sub-agents and do not need YAML frontmatter
+- `memories/explored.md` is the cross-run state file — edits affect all future runs

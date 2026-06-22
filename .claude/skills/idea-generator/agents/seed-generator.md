@@ -2,63 +2,79 @@
 
 ## Activation Context
 
-You have been asked to generate a seed because the user provided no seed file. Good ideas require a concrete persona and real pain points; a generated seed is always better than working from a vague prompt alone.
+You have been asked to generate a seed because the user provided no seed file. Good _monetizable_ ideas require a persona who is already spending money or losing money — not a vague "it'd be nice if" wish. A generated seed is always better than a vague prompt, but a seed without a real money signal is worse than useless: it sends the whole pipeline toward a cute, unpayable niche.
+
+**Core principle: this generator hunts for money that is already moving, not for pain in the abstract.** Every seed must be anchored to a concrete, verifiable money flow. Pain that nobody pays anything to relieve is a FAIL here, not a candidate.
 
 ## Domain Selection
 
-Use any hints the user gave (e.g., "health and wellness", "for side hustles", "for freelancers") to pick a domain. If no hint was given, choose a domain that feels underserved and specific — never pick generic catch-alls like "productivity" or "health" without a narrower angle.
+Use any hints the user gave to pick a domain. If no hint was given, choose a domain where **money is observably already in motion** — paid tools exist, or the unsolved pain directly burns cash or billable time.
 
-## Seed Validation via WebSearch
+- Prefer domains with existing paid tools, subscriptions, or services the target already buys.
+- Actively AVOID pure-hobby / pure-consumer domains where willingness-to-pay is structurally near zero (free-tier expectations, no adjacent paid product), UNLESS you can isolate a **prosumer sub-segment** within them whose pain costs real money or time.
+- Never pick generic catch-alls ("productivity", "health") without a narrower, money-bearing angle.
 
-After generating all 3 seeds, validate each seed's core pain points against the real world using WebSearch. This ensures the generated problems actually exist and have a meaningful user base.
+## The Three Tiers (by monetization structure, NOT experience level)
 
-### Validation Process
+Generate **3 seeds (Seed A, B, C)** in the same domain, each representing a different _structural reason money can be captured_. The tiers are no longer beginner/mid/power-user — they are three distinct shapes of willingness-to-pay:
 
-For each seed, run 1 WebSearch query targeting the primary complaint or frustration described in that seed. Design queries to check whether the problem is real and widespread — e.g., search for the specific frustration, tool complaint, or unmet need mentioned in the seed.
+- **Seed A — Recurring (継続型):** The pain recurs weekly or more often, so value re-materializes continuously. This is the only tier where subscription is structurally honest. The persona must describe a habit/obligation that does not end (e.g., a need tied to a multi-year life stage, a weekly work ritual). Anchor: _what ongoing thing makes this never stop?_
 
-- Do NOT include "app" in queries — the domain may produce physical products, services, or communities, not just apps.
-- Use concrete terms from the seed (tool names, specific complaints) rather than generic keywords.
-  - Example: if Seed A complains about "MyFitnessPal calorie logging being tedious for Japanese meals", search `MyFitnessPal Japanese food logging frustrations`.
+- **Seed B — Adjacent-spend (金流れ隣接型):** The persona is **already paying for a tool in this exact space** and is dissatisfied with one specific thing. This is the strongest WTP evidence because it is the persona's own billing history. The seed MUST name the real product, its real price, and the specific unmet need — the opening is a wedge against an existing paid incumbent, not a greenfield guess. Anchor: _what are they already paying, to whom, and what's the one crack?_
 
-### Pass / Fail Criteria
+- **Seed C — Prosumer / cost-of-doing-business (経費型):** The pain consumes **money or billable time** for someone whose time has a high hourly value (freelancer, sole proprietor, small-business operator, licensed professional). Because the relief has visible ROI, this persona pays 5–10× what a consumer would and can expense it. This is the tier the old generator structurally erased with its "consumers won't pay over $7/month" rule — that rule is DELETED. Anchor: _whose paid hours or cash does this pain eat?_
 
-A seed **passes** validation if search results confirm:
-- The described problem or frustration genuinely exists (users are complaining about it, discussing it, or working around it)
-- There is a meaningful number of affected users (not an isolated edge case)
+## Mandatory Evidence Hook (the load-bearing change)
 
-A seed **fails** validation if:
-- No evidence of the described problem exists in search results
-- The problem exists but affects only a negligible number of users
-- The tool or service named in the seed does not actually have the described limitation
+Every seed must contain an **evidence hook**: a concrete, real-world money signal the seed is built on. This is not "I would pay X" (a wish). It is one of:
 
-### On Failure
+1. **"I already pay $X to [real product] for [job]"** — the persona's actual current spend (best; native to Seed B).
+2. **"This costs me $X / N billable hours every [period]"** — a quantified recurring cost the pain creates (native to Seed C).
+3. **"[Real paid product/service] in this space sells at $X"** — a named, real, currently-selling adjacent product proving money moves here (acceptable for Seed A when the persona isn't yet paying).
 
-If a seed fails validation, discard it entirely and generate a new seed from scratch for the same persona tier (A, B, or C). Then validate the replacement seed with a new WebSearch query. Repeat until the seed passes. Do not attempt more than 5 regenerations per persona tier — if the fifth replacement also fails, keep it and move on.
+A seed with no evidence hook — only a described frustration — is invalid and must be regenerated. "I think people would like this" never qualifies.
 
 ## Required Seed Elements
 
-Write the seed in first-person, conversational style as if a real user wrote their personal notes. The seed must include all of the following:
+Write each seed in first-person, conversational style, like a real person's notes. Each seed MUST include:
 
-- **First-person, conversational tone** — written like a personal memo or stream of thought ("I've been doing X for 3 years", "I find Y frustrating", "I'd pay Z/month for this")
-- **Real existing tool/service names with specific complaints** — name actual products (Notion, Toggl, Goodreads, etc.) and explain what exactly falls short
-- **Usage frequency or years of experience** — quantify with numbers ("3 years", "3x a week", "5–10 books/month")
-- **Price sensitivity** — a concrete budget ceiling with a frugal tone, expressed in the pricing model that fits the persona's usage pattern. Use Japan-realistic price ranges: subscription → "max $3–5/month", one-time purchase → "$5 one-time, maybe", usage-based → "up to $1/use". Always lean cheap — Japanese consumers rarely pay over $7/month for a single app.
-- **A target user summary line** — placed at the very end, starting with "Target user: …"
+- **First-person, conversational tone** — a personal memo ("I've been doing X for 3 years", "every month I end up...").
+- **Real existing tool/service names with specific complaints** — name actual products and what exactly falls short.
+- **Usage frequency or years of experience** — quantified ("3 years", "3× a week", "monthly").
+- **An evidence hook** (see above) — a real money flow, stated concretely with product names and prices/costs.
+- **WTP expressed by tier, anchored to the hook — NOT a blanket cheap ceiling.** Recurring: what they'd pay monthly given the habit. Adjacent-spend: framed relative to what they already pay the incumbent. Prosumer: framed as ROI against the hours/cash burned. Do not force a "$7/month max" — let the hook set the ceiling. Cheap personas are allowed only if the hook genuinely demands it, never as a default.
+- **A target user summary line** at the very end, starting with "Target user: …".
+
+## Seed Validation via WebSearch (validates the MONEY, not just the pain)
+
+After generating all 3 seeds, validate each seed's **evidence hook** against the real world with 1 WebSearch query. The question is not "does this pain exist?" — it is "**is the money flow this seed claims actually real?**"
+
+- For an "already pay $X to [product]" hook: verify the product exists and the price is in the right ballpark.
+- For a "costs me $X / N hours" hook: verify the underlying cost is real and non-trivial for that segment.
+- For a "[product] sells at $X" hook: verify that named product is real and currently sold.
+- Do NOT include "app" in queries — the money flow may involve services, tools, or labor, not apps.
+- Use concrete terms (real product names, real prices) from the seed.
+
+## Pass / Fail Criteria
+
+A seed **passes** only if search confirms BOTH:
+
+- The described pain/behavior genuinely exists with a meaningful user base, AND
+- **The evidence hook is real** — the named product/price exists, or the quantified cost is verifiably borne by the segment.
+
+A seed **FAILS** if:
+
+- No evidence of the pain, or only an isolated edge case, OR
+- **The money signal can't be verified** — the cited paid product doesn't exist or isn't paid, the price is fictional, or the "cost" turns out to be trivial/free to avoid. (This is the gate the old pipeline lacked: "real pain, but nobody pays anything" now fails _here_, upstream, instead of leaking into a proposal as "WTP unverified".)
+
+## On Failure
+
+Discard the failed seed entirely and regenerate from scratch for the same tier (A, B, or C), then re-validate with a new query. Repeat up to 5 times per tier; if the 5th still fails, keep it but flag it loudly as "⚠ unverified money signal — treat as weak".
 
 ## Output Format
 
-Generate **3 seeds (Seed A, B, C)** — each a short plain-text block. Do not use Markdown headers or bullet points within each seed — write it as flowing prose or note-style text, the way a real person would jot down their thoughts.
-
-The 3 seeds must represent meaningfully different personas within the same domain:
-
-- **Seed A**: Less experienced user, clear single pain point, minimal budget (e.g., "free only, or $3/month absolute max")
-- **Seed B**: Mid-level user, multiple overlapping frustrations, cautious spender (e.g., "$5/month tops, and it better replace something I'm already paying for")
-- **Seed C**: Power user or atypical use case, pushes the domain in an unexpected direction, willing to pay but still price-conscious (e.g., "up to $7/month if it saves me real time, or $10 one-time")
-
-Each seed must still include all required elements: first-person tone, real tool names with specific complaints, usage frequency, price sensitivity, and a "Target user:" line.
+Output the 3 seeds (Seed A, B, C) as short plain-text blocks — flowing prose / note-style, no Markdown headers or bullets inside a seed. The 3 must be meaningfully different personas in the same domain, one per monetization tier above, each carrying its evidence hook and a closing "Target user:" line.
 
 ## Post-Generation
 
-After generating and validating all seeds, show the final three to the user with a brief note: "Generated 3 seeds (validated via WebSearch). Using these personas as the basis for ideas." If any seed was regenerated, mention which one and why in a single line.
-
-Then continue directly to the proposal generation step — do not wait for user confirmation unless they explicitly indicate they want to review or change the seeds.
+Show the final three to the user with: "Generated 3 seeds (money signals validated via WebSearch). Tiers: A=recurring, B=adjacent-spend, C=prosumer." If any seed was regenerated or kept-but-flagged, say which and why in one line. Then continue directly to candidate generation — do not wait for confirmation unless the user asks to review or change the seeds.

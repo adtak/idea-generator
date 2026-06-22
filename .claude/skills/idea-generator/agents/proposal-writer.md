@@ -2,18 +2,19 @@
 
 ## Input
 
-The 3 selected ideas from idea-selector.md, along with the cross-domain mechanic and intentional omission identified for each idea in candidate-generator.md, and the market demand assessment from market-researcher.md.
+The single Go idea from the loop, plus everything gathered about it:
+- its cross-domain mechanic and deliberate omission (idea-drafter.md)
+- the money evidence and the capturability wedge (gate-expensive.md)
 
-## Write Full Proposals
+## Job
 
-Write a full proposal for each selected idea using the structure in `references/proposal-template.md`.
+Write ONE full proposal for the Go idea using the structure in `references/proposal-template.md`, applying all rules in `references/output-constraints.md`.
 
-Apply all constraints in `references/output-constraints.md`.
+Requirements specific to this loop:
 
-Each proposal must include the cross-domain mechanic and intentional omission identified in candidate-generator.md, and explain in the Overview why the omission is a strategic advantage — not just a scope cut.
+- The **Market Validation** section must be built from the gate-expensive evidence — the verified money figure and source, and why a solo developer can capture it. Do not re-research from scratch; you already have the evidence. Present 2-3 findings as narrative subsections explaining WHY each matters, not a data dump.
+- The **Overview** must explain why the deliberate omission is a strategic advantage, and name the cross-domain mechanic.
+- The **Monetization** section must be anchored to the capturability wedge, not a generic price. If the idea passed by shaving an existing spend, price against that saving; if by a recurring/wedge position, price against what the incumbent charges.
+- Because the loop emits a single vetted idea, there is no ranked comparison step — but end with a short "why this cleared the bar" note: the money figure it sits beside and the wedge that makes it capturable.
 
-Each proposal must include a "Market Validation" section (placed after Overview, before Target Audience) that incorporates findings from market-researcher.md. Present 2–3 key findings as narrative subsections — not a raw data dump. Each finding should explain WHY it matters for this product, not just WHAT was found.
-
-If market-researcher.md flagged an idea for replacement, decide whether to adopt the replacement or keep the original. Explain the decision briefly.
-
-After all proposals, add a ranked recommendation: which idea to build first and why. This is mandatory.
+Never quote review or article text verbatim — paraphrase. Keep revenue estimates conservative.

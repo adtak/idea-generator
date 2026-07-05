@@ -4,3 +4,6 @@
 # Generated seed files (keep directory tracked via .gitkeep)
 /seeds/*
 !/seeds/.gitkeep
+
+# Cross-run memory (local state, not tracked)
+/.claude/skills/idea-generator/memories/

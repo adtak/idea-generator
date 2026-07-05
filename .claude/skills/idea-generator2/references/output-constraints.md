@@ -18,9 +18,9 @@ Keep revenue estimates conservative. Do not inflate numbers to make ideas sound 
 
 Describe features in terms of what the user does and what happens — not abstract capabilities. Bad: "AI-powered insights". Good: "user taps a button to get a plain-English summary of their week".
 
-## Ranked Recommendation Required
+## Single Winning Proposal
 
-When outputting multiple proposals (which is always), end with a ranked recommendation: which idea to build first and why. This is mandatory, not optional.
+This skill outputs exactly ONE proposal — the first idea that earns a Go in the rejection-sampling loop. Do not batch several ideas and rank them. If no idea earns a Go, output the shortfall report instead of a proposal; never fabricate a winner.
 
 ## Market Validation Required
 

@@ -7,3 +7,4 @@
 
 # Cross-run memory (local state, not tracked)
 /.claude/skills/idea-generator/memories/
+/.claude/skills/idea-generator2/memories/

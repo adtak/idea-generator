@@ -14,7 +14,16 @@ Pick exactly ONE fresh domain to attempt next. Reasoning only — do NOT use Web
 
 Two forces, held in tension on purpose:
 
-- **Mild money bias.** Lean toward domains where money is *plausibly already moving* — paid tools, subscriptions, services, or real recurring/billable costs likely exist. This lifts the downstream pass rate. Do NOT verify it here; just use judgment.
+- **Mild money bias.** Lean toward domains where money is *plausibly already moving*. This lifts the downstream pass rate. Do NOT verify it here; just use judgment. Money can take many forms — pick from the full range, not just the most obvious:
+  - Subscriptions or SaaS people already pay (apps, tools, platforms)
+  - Content or digital goods purchases (courses, templates, media)
+  - Hardware or consumable costs people incur regularly
+  - Time costs billed by professionals (coaches, trainers, consultants)
+  - Professional/agency fees for administrative or legal filings (行政書士, 税理士, 社労士, etc.)
+  - Marketplace transaction fees or commissions
+  - Recurring service contracts (maintenance, insurance, memberships)
+
+  **Watch out for over-representation**: "professional fee compression via DIY self-application" (e.g. 行政書士 代行 → 自己申請) is already the dominant pattern in the GO table. Actively avoid it unless the domain is genuinely distinct from prior GO entries. Prefer a different money form this iteration.
 - **Reach for the non-obvious.** Do not keep returning to the same 2-3 safe domains. Across the run, range widely — different user contexts, including at least some the user would never have proposed themselves. A domain that is monetizable but boringly obvious is a weaker pick than one that is monetizable AND unexpected.
 
 Hard requirements for the pick:
